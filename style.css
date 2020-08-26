@@ -117,3 +117,12 @@ html {
     opacity: 1;
   }
 }
+
+.sidebar {
+  position: fixed;
+  width: 40rem;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: white;
+}
