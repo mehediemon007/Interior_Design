@@ -25,6 +25,45 @@ html {
   transition: right 0.7s;
 }
 
+.change .hamburger-menu {
+  right: 33rem;
+}
+
+.hamburger-menu span {
+  position: absolute;
+  left: 5rem;
+  width: 10rem;
+  height: 4rem;
+  background-color: #c29525;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+  font-family: "Baloo Da 2", serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+
+.change .hamburger-menu:hover span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hamburger-menu span::before {
+  content: "";
+  position: absolute;
+  border-right: 1rem solid #c29525;
+  border-left: 1rem solid transparent;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  top: 50%;
+  left: -2rem;
+  transform: translateY(-50%);
+}
+
 .line {
   width: 100%;
   height: 0.2rem;
@@ -32,8 +71,20 @@ html {
   box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0.2);
 }
 
-.change .hamburger-menu {
-  right: 33rem;
+.change .line {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.change .line1 {
+  transform: rotate(45deg) translate(0.3rem, 0.8rem);
+}
+
+.change .line2 {
+  visibility: hidden;
+}
+
+.change .line3 {
+  transform: rotate(-45deg) translate(0.3rem, -0.8rem);
 }
 
 .header {
